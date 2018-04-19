@@ -6,7 +6,30 @@
 //Last Changed Date: 4/21/18
 //***************************************************************
 package mathGame;
+import java.lang.Math;
 
-public class Power {
+public class Power extends Question{
+	
+	public Power(int operand1, int operand2)
+	{
+		super(operand1, operand2);
+	}
 
+	@Override
+	public String getQuestion()
+	{
+		return "What is " + operand1 + "^" + operand2 + "?";
+	}
+
+	@Override
+	public int getActualAnswer()
+	{
+		return (int) Math.pow(operand1, operand2);
+	}
+
+	@Override
+	public boolean checkAnswer(int userAnswer)
+	{
+		return userAnswer == getActualAnswer();
+	}
 }
