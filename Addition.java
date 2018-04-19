@@ -7,6 +7,29 @@
 //***************************************************************
 package mathGame;
 
-public class Addition {
+public class Addition extends Question{
+	
+	public Addition(int operand1, int operand2)
+	{
+		super(operand1, operand2);
+	}
+
+	@Override
+	public String getQuestion()
+	{
+		return "What is " + operand1 + "+" + operand2 + "?";
+	}
+
+	@Override
+	public int getActualAnswer()
+	{
+		return operand1 + operand2;
+	}
+
+	@Override
+	public boolean checkAnswer(int userAnswer)
+	{
+		return userAnswer == getActualAnswer();
+	}
 
 }
