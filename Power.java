@@ -26,10 +26,5 @@ public class Power extends Question{
 	{
 		return (int) Math.pow(operand1, operand2);
 	}
-
-	@Override
-	public boolean checkAnswer(int userAnswer)
-	{
-		return userAnswer == getActualAnswer();
-	}
+	
 }
