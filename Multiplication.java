@@ -26,10 +26,4 @@ public class Multiplication extends Question{
 		return operand1*operand2;
 	}
 
-	@Override
-	public boolean checkAnswer(int userAnswer)
-	{
-		return userAnswer == getActualAnswer();
-	}
-
 }
