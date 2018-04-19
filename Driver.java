@@ -19,25 +19,30 @@ public class Driver {
 		Random myRand = new Random();
 		Scanner myScan = new Scanner(System.in);
 		
-		Question[] questions = new Question[5];
+		Question[] questions = new Question[5];		
 		
-		Addition addition;
-		Subtraction subtraction;
-		Multiplication multiplication;
-		Division division;
-		Power power;
-		
-		// Build Array
-
-		questions[0] = new Addition(myRand.nextInt(10), myRand.nextInt(10));
-		questions[1] = new Subtraction(myRand.nextInt(10), myRand.nextInt(10));
-		questions[2] = new Multiplication(myRand.nextInt(10), myRand.nextInt(10));
-		questions[3] = new Division(myRand.nextInt(10), myRand.nextInt(10));
-		questions[4] = new Power(myRand.nextInt(10), myRand.nextInt(10));
-		
-		System.out.println(questions[0].getQuestion());
-		System.out.println(questions[0].operand1);
-		System.out.println(questions[0].operand2);
+		for (int i = 0; i < 5; i++)
+		{
+			// Build Array
+			questions[0] = new Addition(myRand.nextInt(9)+1, myRand.nextInt(9)+1);
+			questions[1] = new Subtraction(myRand.nextInt(9)+1, myRand.nextInt(9)+1);
+			questions[2] = new Multiplication(myRand.nextInt(9)+1, myRand.nextInt(9)+1);
+			questions[3] = new Division(myRand.nextInt(9)+1, myRand.nextInt(9)+1);
+			questions[4] = new Power(myRand.nextInt(9)+1, myRand.nextInt(9)+1);
+			
+			int randNum = myRand.nextInt(questions.length);
+			String question = questions[randNum].getQuestion();
+			System.out.println(question);
+			int userAnswer = myScan.nextInt();
+			if (questions[randNum].checkAnswer(userAnswer) == true)
+			{
+				System.out.println("Great job!");
+			}
+			else
+			{
+				System.out.println("Better luck next time!");
+			}
+		}
 
 	}
 
