@@ -7,6 +7,24 @@
 //***************************************************************
 package mathGame;
 
-public class Division {
+public class Division extends Question{
+	
+	public Division(int operand1, int operand2)
+	{
+		super(operand1, operand2);
+	}
+
+	@Override
+	public String getQuestion()
+	{
+		return "What is " + operand1 + "/" + operand2 + "?";
+	}
+
+	@Override
+	public int getActualAnswer()
+	{
+		return operand1/operand2;
+	}
 
 }
+
