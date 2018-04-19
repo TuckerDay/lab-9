@@ -24,11 +24,11 @@ public class Driver {
 		for (int i = 0; i < 5; i++)
 		{
 			// Build Array
-			questions[0] = new Addition(myRand.nextInt(9)+1, myRand.nextInt(9)+1);
-			questions[1] = new Subtraction(myRand.nextInt(9)+1, myRand.nextInt(9)+1);
-			questions[2] = new Multiplication(myRand.nextInt(9)+1, myRand.nextInt(9)+1);
-			questions[3] = new Division(myRand.nextInt(9)+1, myRand.nextInt(9)+1);
-			questions[4] = new Power(myRand.nextInt(9)+1, myRand.nextInt(9)+1);
+			questions[0] = new Addition(myRand.nextInt(10), myRand.nextInt(10));
+			questions[1] = new Subtraction(myRand.nextInt(10), myRand.nextInt(10));
+			questions[2] = new Multiplication(myRand.nextInt(10), myRand.nextInt(10));
+			questions[3] = new Division(myRand.nextInt(10), myRand.nextInt(9)+1);
+			questions[4] = new Power(myRand.nextInt(10), myRand.nextInt(10));
 			
 			int randNum = myRand.nextInt(questions.length);
 			String question = questions[randNum].getQuestion();
