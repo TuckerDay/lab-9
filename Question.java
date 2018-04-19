@@ -25,6 +25,9 @@ public abstract class Question {
 	
 	abstract public int getActualAnswer();
 	
-	abstract public boolean checkAnswer(int userAnswer);
+	public boolean checkAnswer(int userAnswer)
+	{
+		return userAnswer == getActualAnswer();
+	}
 
 }
