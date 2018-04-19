@@ -25,6 +25,6 @@ public abstract class Question {
 	
 	abstract public int getActualAnswer();
 	
-	abstract public boolean checkAnswer();
+	abstract public boolean checkAnswer(int userAnswer);
 
 }
